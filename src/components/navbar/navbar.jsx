@@ -61,13 +61,18 @@ const Navbar = () => {
                 to="/signin"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
+                style={{ textDecoration: "none" }}
               >
                 Sign In
               </Link>
             </li>
           </ul>
           {button1 && (
-            <Button buttonStyle="btn--outline" link="/signin">
+            <Button
+              buttonStyle="btn--outline"
+              link="/signin"
+              style={{ textDecoration: "none" }}
+            >
               Sign In
             </Button>
           )}

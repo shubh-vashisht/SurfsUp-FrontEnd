@@ -2,27 +2,26 @@
 * {
   font-family: "Roboto", sans-serif;
 }
-/* isko */
-.eatBody {
+
+body {
   background-image: url("../../images/bg.jpg");
 }
 
-/* isko */
-.eattop h1 {
+.stayTop h1 {
   color: #1d5171;
   text-align: center;
   font-size: 50px;
 }
-/* isko */
-.eattop h2 {
+
+.stayTop h2 {
   color: #236e95;
   text-align: center;
   margin-top: 0px;
   font-size: 40px;
 }
-/* isko */
-.eatmain {
-  left: 80px;
+
+.staymain {
+  left: 40px;
   position: relative;
   width: 100%;
   display: block;
@@ -33,21 +32,19 @@
   align-self: center;
 }
 
-.eatmain img {
+.staymain img {
   width: 200px;
   display: block;
-  float: right;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
 
-#eatitem {
+#stayitem {
   background-color: white;
   border-radius: 30px;
-  display: block;
-  width: 85%;
-  height: fit-content;
+  display: inline-block;
+  width: 28%;
+  height: 400px;
   padding: 20px;
   margin: 20px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
@@ -59,68 +56,15 @@
   align-content: center;
 }
 
-#eatitem img {
+#stayitem img {
   width: 130px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  bottom: 10px;
-}
-
-#eatitem h2 {
-  font-size: 30px;
-  margin-bottom: 5px;
-}
-
-#eatitem h3 {
-  font-size: 25px;
-}
-
-#eatitem p {
-  font-size: 20px;
-  margin-bottom: 20px;
 }
 
 /* GENERAL BUTTON STYLING */
-button,
-button::after {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-button {
-  background: none;
-  border: 1px solid #1d5171;
-  border-radius: 20px;
-  color: #1d5171;
-  display: block;
-  font-size: 12px;
-  font-weight: bolder;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: 0;
-
-  padding: 2em 6em;
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-button::before,
-button::after {
-  background: #236e95;
-  content: "";
-  position: absolute;
-  z-index: -1;
-}
-
-button:hover {
-  color: white;
-  background: #236e95;
-}
 
 /* BUTTON 1 */
 .btn-1::after {

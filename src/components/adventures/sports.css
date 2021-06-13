@@ -2,26 +2,25 @@
 * {
   font-family: "Roboto", sans-serif;
 }
-/* isko */
-.eatBody {
+
+body {
   background-image: url("../../images/bg.jpg");
 }
 
-/* isko */
-.eattop h1 {
+.top h1 {
   color: #1d5171;
   text-align: center;
   font-size: 50px;
 }
-/* isko */
-.eattop h2 {
+
+.top h2 {
   color: #236e95;
   text-align: center;
   margin-top: 0px;
   font-size: 40px;
 }
-/* isko */
-.eatmain {
+
+.sportmain {
   left: 80px;
   position: relative;
   width: 100%;
@@ -33,19 +32,34 @@
   align-self: center;
 }
 
-.eatmain img {
-  width: 200px;
+.sportmain h2 {
+  padding: 10px;
+  font-size: 40px;
+}
+.sportmain h5 {
+  padding: 10px;
+  font-size: 25px;
+}
+
+.sportmain h4 {
+  padding: 10px;
+  font-size: 10px;
+}
+.sportbtn-1 {
+  margin-top: 80px;
+}
+.sportmain img {
+  width: 400px;
   display: block;
   float: right;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
 
-#eatitem {
+#sportitem {
   background-color: white;
   border-radius: 30px;
-  display: block;
+  display: inline-block;
   width: 85%;
   height: fit-content;
   padding: 20px;
@@ -59,78 +73,27 @@
   align-content: center;
 }
 
-#eatitem img {
-  width: 130px;
+#sportitem img {
+  padding: 20px;
+  position: relative;
+  width: 330px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  bottom: 10px;
-}
-
-#eatitem h2 {
-  font-size: 30px;
-  margin-bottom: 5px;
-}
-
-#eatitem h3 {
-  font-size: 25px;
-}
-
-#eatitem p {
-  font-size: 20px;
-  margin-bottom: 20px;
 }
 
 /* GENERAL BUTTON STYLING */
-button,
-button::after {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-button {
-  background: none;
-  border: 1px solid #1d5171;
-  border-radius: 20px;
-  color: #1d5171;
-  display: block;
-  font-size: 12px;
-  font-weight: bolder;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: 0;
-
-  padding: 2em 6em;
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-button::before,
-button::after {
-  background: #236e95;
-  content: "";
-  position: absolute;
-  z-index: -1;
-}
-
-button:hover {
-  color: white;
-  background: #236e95;
-}
 
 /* BUTTON 1 */
-.btn-1::after {
+.sportbtn-1::after {
   height: 0;
   left: 0;
   top: 0;
   width: 100%;
 }
 
-.btn-1:hover:after {
+.sportbtn-1:hover:after {
   height: 100%;
 }
 

@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./eat.css";
-
+import HeroSection from "../heroSecEat/heroEat";
+import icons from "glyphicons";
+import Waves from "../waves/waves";
+import a from "../../images/food.png";
 class Restaurants extends Component {
   state = { posts: [] };
   async componentDidMount() {
@@ -9,99 +12,43 @@ class Restaurants extends Component {
     this.setState({ posts });
     console.log(this.state.posts);
   }
+  renderStars(num) {
+    let ans = [];
+    for (let i = 0; i < num; ++i) {
+      ans.push(1);
+    }
+    return ans;
+  }
   render() {
+    const posts = this.state.posts;
     return (
       <div className="eatBody">
-        <div className="eattop">
-          <h1>Restaurants</h1>
-          <h2>Long Beach</h2>
-        </div>
+        <HeroSection title="Restaurants" subtitle="Fine Dining in Long Beach" />
 
         <div className="eatmain">
-          <div id="item" className="i1">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <img src="../../images/food.png" alt="" />
-            <div className="rating">
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star half"></i>
-            </div>
-            <button className="btn-1">EXPLORE</button>
-          </div>
-
-          <div id="item" className="i2">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <img src="../../images/food.png" alt="" />
-            <div className="rating">
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star half"></i>
-            </div>
-            <button className="btn-1">EXPLORE</button>
-          </div>
-
-          <div id="item" className="i3">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <img src="../../images/food.png" alt="" />
-            <div className="rating">
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star half"></i>
-            </div>
-            <button className="btn-1">EXPLORE</button>
-          </div>
-
-          <div id="item" className="i4">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <img src="../../images/food.png" alt="" />
-            <div className="rating">
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star half"></i>
-            </div>
-            <button className="btn-1">EXPLORE</button>
-          </div>
-
-          <div id="item" className="i5">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <img src="../../images/food.png" alt="" />
-            <div className="rating">
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star half"></i>
-            </div>
-            <button className="btn-1">EXPLORE</button>
-          </div>
-
-          <div id="item" className="i6">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <img src="../../images/food.png" alt="" />
-            <div className="rating">
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star"></i>
-              <i className="glyphicon glyphicon-star half"></i>
-            </div>
-            <button className="btn-1">EXPLORE</button>
-          </div>
+          {posts.map((element) => {
+            return (
+              <div key={element._id} id="eatitem" className="eati1">
+                <h2>{element.name}</h2>
+                <p>{element.location}</p>
+                <h3>Cuisines</h3>
+                <p>{element.cuisine}</p>
+                <h3>Cost for Two:</h3>
+                <p>{element.costfortwo}$</p>
+                <img src={a} alt="" />
+                <div className="rating">
+                  {this.renderStars(element.rating).map(() => {
+                    return (
+                      <i className="glyphicon glyphicon-star">{icons.star}</i>
+                    );
+                  })}
+                </div>
+                <button className="btn-1">EXPLORE</button>
+              </div>
+            );
+          })}
         </div>
+        <Waves />
       </div>
     );
   }

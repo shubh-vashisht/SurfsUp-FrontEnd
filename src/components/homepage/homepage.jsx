@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 import "./homepage.css";
+import { Link } from "react-router-dom";
+import HeroSection from "../heroSecHome/heroHome";
+import Waves from "../waves/waves";
 import "mapbox-gl/dist/mapbox-gl.css";
+import hotel from "../../images/hotel.png";
+import food from "../../images/food.png";
+import sports from "../../images/activity.png";
 mapboxgl.accessToken =
   "pk.eyJ1IjoicHJpeWFkYXJzaGktYW1hbiIsImEiOiJja3B0bTdpNjYwM2RqMnFwYXBlcXh6OHhnIn0.AvnjsRrV6uWKX4IHTB5Z6A";
 
@@ -28,96 +34,59 @@ class HomePage extends Component {
   }
   render() {
     return (
-      <div className="body">
-        <div className="top">
-          <h1>Long Beach</h1>
-        </div>
+      <>
+        <HeroSection
+          title="Welcome to Long Beach!"
+          subtitle="explore Long Beach"
+        />
+        <div className="body">
+          <div className="main">
+            <div className="i1 item">
+              <h2>Hotels</h2>
+              <p>
+                Stay at luxurious locations filled with happy vibes and great
+                ambience.
+              </p>
 
-        <div className="main">
-          <div className="i1">
-            <h2>Lorem ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <img src="images/food.png" alt="" />
-            <button className="btn-1">EXPLORE</button>
+              <img src={hotel} alt="" />
+              <Link to="/stay" style={{ textDecoration: "none" }}>
+                <button className="btn-1">EXPLORE</button>
+              </Link>
+            </div>
+
+            <div className="i2 item">
+              <h2>Restaurants</h2>
+              <p>
+                Here is the list of the best fine dining restaurants in Long
+                Beach.
+              </p>
+
+              <img src={food} alt="" />
+              <Link to="/eat" style={{ textDecoration: "none" }}>
+                <button className="btn-1">EXPLORE</button>
+              </Link>
+            </div>
+
+            <div className="i3 item">
+              <h2>Adventures</h2>
+              <p>
+                Here is a list of adventures sports you can attend at Long
+                Beach!
+              </p>
+
+              <img src={sports} alt="" />
+              <div className="btn-1">
+                <Link to="/sports" style={{ textDecoration: "none" }}>
+                  <button className="hpbutton">EXPLORE</button>
+                </Link>
+              </div>
+            </div>
           </div>
 
-          <div className="i2">
-            <h2>Lorem ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <img src="images/hotel.png" alt="" />
-            <button className="btn-1">EXPLORE</button>
-          </div>
-
-          <div className="i3">
-            <h2>Lorem ipsum</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <img src="images/activity.png" alt="" />
-            <button className="btn-1">EXPLORE</button>
-          </div>
+          <div id="map" style={{ width: "95%", height: "400px" }}></div>
+          <Waves />
         </div>
-
-        <div id="map" style={{ width: "95%", height: "400px" }}></div>
-        {/* <div
-          id="map"
-          ref={this.mapContainer}
-          className="map-container"
-          style={{ width: "95%", height: "400px" }}
-        /> */}
-
-        <div>
-          <svg
-            className="waves"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28"
-            preserveAspectRatio="none"
-            shape-rendering="auto"
-          >
-            <defs>
-              <path
-                id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-              />
-            </defs>
-            <g className="parallax">
-              <use
-                xlinkHref="#gentle-wave"
-                x="48"
-                y="0"
-                fill="rgba(255,255,255,0.7"
-              />
-              <use
-                xlinkHref="#gentle-wave"
-                x="48"
-                y="3"
-                fill="rgba(255,255,255,0.5)"
-              />
-              <use
-                xlinkHref="#gentle-wave"
-                x="48"
-                y="5"
-                fill="rgba(255,255,255,0.3)"
-              />
-              <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-          </svg>
-        </div>
-      </div>
+      </>
     );
   }
 }
