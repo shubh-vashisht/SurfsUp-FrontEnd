@@ -27,7 +27,7 @@ class Hotels extends Component {
       <div>
         <HeroSection
           title="Hotels"
-          subtitle="Best places in long beach to straigthen your back"
+          subtitle="Best places in long beach to straighten your back"
         />
 
         <div class="staymain">
