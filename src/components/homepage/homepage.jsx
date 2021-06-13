@@ -31,6 +31,7 @@ class HomePage extends Component {
       center: [lng, lat], // starting position [lng, lat]
       zoom: zoom, // starting zoom
     });
+    window.scrollTo(0, 0);
   }
   render() {
     return (

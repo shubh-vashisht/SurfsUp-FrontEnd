@@ -10,7 +10,7 @@ class Restaurants extends Component {
   async componentDidMount() {
     const { data: posts } = await axios.get("http://localhost:4000/eat/");
     this.setState({ posts });
-    console.log(this.state.posts);
+    window.scrollTo(0, 0);
   }
   renderStars(num) {
     let ans = [];

@@ -3,13 +3,13 @@ import axios from "axios";
 import "./sports.css";
 import Waves from "../waves/waves";
 import HeroSection from "../heroSecAdv/heroAdv";
-import img from "../../images/activity.png";
+import img from "../../images/activity2.png";
 class Sports extends Component {
   state = { sports: [] };
   async componentDidMount() {
     const { data: sports } = await axios.get("http://localhost:4000/sports/");
     this.setState({ sports });
-    console.log(this.state.sports);
+    window.scrollTo(0, 0);
   }
 
   render() {

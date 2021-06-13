@@ -6,7 +6,7 @@ import Footer from "./components/footer/footer";
 import Restaurants from "./components/restaurants/eat";
 import Hotels from "./components/stay/stay";
 import Sports from "./components/adventures/sports";
-import LoginForm from "./components/signin/loginform";
+import Contact from "./components/Contact/contact";
 import {
   BrowserRouter as Router,
   Route,
@@ -23,7 +23,7 @@ function App() {
           <Route path="/eat" exact component={Restaurants} />
           <Route path="/stay" exact component={Hotels} />
           <Route path="/sports" exact component={Sports} />
-          <Route path="/signin" exact component={LoginForm} />
+          <Route path="/contact" exact component={Contact} />
 
           <Route path="/notFound" exact component={NotFound} />
           <Redirect path="/:id" to="/notFound" />

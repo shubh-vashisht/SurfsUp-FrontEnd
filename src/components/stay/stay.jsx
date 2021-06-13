@@ -10,7 +10,7 @@ class Hotels extends Component {
   async componentDidMount() {
     const { data: hotels } = await axios.get("http://localhost:4000/stay/");
     this.setState({ hotels });
-    console.log(this.state.hotels);
+    window.scrollTo(0, 0);
   }
 
   renderStars(num) {

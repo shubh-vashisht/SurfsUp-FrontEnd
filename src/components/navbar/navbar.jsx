@@ -58,22 +58,22 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/signin"
+                to="/contact"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
                 style={{ textDecoration: "none" }}
               >
-                Sign In
+                Contact
               </Link>
             </li>
           </ul>
           {button1 && (
             <Button
               buttonStyle="btn--outline"
-              link="/signin"
+              link="/contact"
               style={{ textDecoration: "none" }}
             >
-              Sign In
+              Contact
             </Button>
           )}
         </div>
