@@ -39,7 +39,7 @@ class HomePage extends Component {
     return (
       <>
         <HeroSection
-          title="Welcome to Long Beach!"
+          title="Welcome to Long Beach, Miaaaami!"
           subtitle="explore Long Beach"
         />
         <div className="body">
