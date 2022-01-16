@@ -38,10 +38,7 @@ class HomePage extends Component {
   render() {
     return (
       <>
-        <HeroSection
-          title="Welcome to Long Beach, Miaaaami!"
-          subtitle="explore Long Beach"
-        />
+        <HeroSection title="Welcome to Long Beach!" />
         <div className="body">
           <div className="main">
             <div className="i1 item">
