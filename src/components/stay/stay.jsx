@@ -5,12 +5,14 @@ import Waves from "../waves/waves";
 import icons from "glyphicons";
 import "./stay.css";
 import img from "../../images/hotel.png";
+require("dotenv").config();
 class Hotels extends Component {
   state = { hotels: [] };
+  baseUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:4000";
   async componentDidMount() {
-    const { data: hotels } = await axios.get("http://localhost:4000/stay/");
-    this.setState({ hotels });
     window.scrollTo(0, 0);
+    const { data: hotels } = await axios.get(`${this.baseUrl}/stay/`);
+    this.setState({ hotels });
   }
 
   renderStars(num) {

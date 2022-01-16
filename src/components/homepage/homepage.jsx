@@ -7,7 +7,7 @@ import Waves from "../waves/waves";
 import "mapbox-gl/dist/mapbox-gl.css";
 import hotel from "../../images/hotel.png";
 import food from "../../images/food.png";
-import sports from "../../images/activity.png";
+import sports from "../../images/activity2.png";
 mapboxgl.accessToken =
   "pk.eyJ1IjoicHJpeWFkYXJzaGktYW1hbiIsImEiOiJja3B0bTdpNjYwM2RqMnFwYXBlcXh6OHhnIn0.AvnjsRrV6uWKX4IHTB5Z6A";
 
@@ -24,6 +24,8 @@ class HomePage extends Component {
   }
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
+    mapboxgl.workerClass =
+      require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
     let map = new mapboxgl.Map({
       //   container: "map", // container ID
       container: "map",

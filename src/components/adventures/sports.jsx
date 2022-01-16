@@ -6,10 +6,11 @@ import HeroSection from "../heroSecAdv/heroAdv";
 import img from "../../images/activity2.png";
 class Sports extends Component {
   state = { sports: [] };
+  baseUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:4000";
   async componentDidMount() {
-    const { data: sports } = await axios.get("http://localhost:4000/sports/");
-    this.setState({ sports });
     window.scrollTo(0, 0);
+    const { data: sports } = await axios.get(`${this.baseUrl}/sports/`);
+    this.setState({ sports });
   }
 
   render() {

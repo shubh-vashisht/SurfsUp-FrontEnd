@@ -6,7 +6,7 @@
 .body {
   max-width: 100%;
   overflow-x: hidden;
-  background: url("../../images/bg.jpeg") center center/cover no-repeat;
+  /* background: url("../../images/bg.jpeg") center center/cover no-repeat; */
 }
 
 .main {

@@ -7,10 +7,15 @@ import Waves from "../waves/waves";
 import a from "../../images/food.png";
 class Restaurants extends Component {
   state = { posts: [] };
+  baseUrl = process.env.REACT_APP_SERVER_URL || "http://localhost:4000";
   async componentDidMount() {
-    const { data: posts } = await axios.get("http://localhost:4000/eat/");
-    this.setState({ posts });
     window.scrollTo(0, 0);
+    try {
+      const { data: posts } = await axios.get(`${this.baseUrl}/eat/`);
+      this.setState({ posts });
+    } catch (err) {
+      console.log(err);
+    }
   }
   renderStars(num) {
     let ans = [];

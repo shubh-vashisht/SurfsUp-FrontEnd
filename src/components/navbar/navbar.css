@@ -19,7 +19,7 @@
 }
 
 .navbar-logo {
-  color: #6eccc6;
+  color: #185f5a;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -54,7 +54,7 @@
 }
 
 .nav-links {
-  color: #6eccc6;
+  color: #0f5d58;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -63,7 +63,7 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #6eccc6;
+  border-bottom: 4px solid #056861;
   transition: all 0.2s ease-out;
 }
 

@@ -25,55 +25,59 @@ const Navbar = () => {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             Long Beach
-            <i class="fas fa-umbrella-beach ic"></i>
+            <i class="fas fa-lightbulb ic"></i>
           </Link>
           <div className="menu-icon" onClick={() => setClicker(!click)}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/stay" className="nav-links" onClick={closeMobileMenu}>
                 Hotels
               </Link>
             </li>
-
             <li className="nav-item">
               <Link to="/eat" className="nav-links" onClick={closeMobileMenu}>
                 Restaurants
               </Link>
             </li>
+
             <li className="nav-item">
               <Link
                 to="/sports"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Adventures
+                Sports
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/contact"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Contact
               </Link>
             </li>
             <li>
               <Link
-                to="/contact"
+                to="/Login"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
                 style={{ textDecoration: "none" }}
               >
-                Contact
+                Login
               </Link>
             </li>
           </ul>
           {button1 && (
             <Button
               buttonStyle="btn--outline"
-              link="/contact"
+              link="/login"
               style={{ textDecoration: "none" }}
             >
-              Contact
+              Login
             </Button>
           )}
         </div>
