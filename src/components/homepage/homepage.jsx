@@ -24,12 +24,10 @@ class HomePage extends Component {
   }
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
-    mapboxgl.workerClass =
-      require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
     let map = new mapboxgl.Map({
       //   container: "map", // container ID
       container: "map",
-      style: "mapbox://styles/priyadarshi-aman/ckptmoxcb0f4p17pe1rwvlzw1", // style URL
+      style: "mapbox://styles/shubhvashisht/ckyhx0v6lwph114peu72cm23c", // style URL
       center: [lng, lat], // starting position [lng, lat]
       zoom: zoom, // starting zoom
     });
